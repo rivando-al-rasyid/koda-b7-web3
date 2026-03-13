@@ -42,6 +42,7 @@ header {
 }
 
 header img {
+  max-width: 700px;
   width: 100%;
   height: auto;
   display: block;
@@ -112,28 +113,25 @@ ul li a {
 }
 
 @media screen and (min-width: 1024px) {
-  main {
-    background-color: burlywood;
-    position: sticky;
-    top: 10px;
-    bottom: 10px;
-  }
 
-  nav {
-    text-align: center;
-    margin-top: 1rem;
-  }
+  main{
+    background-color: goldenrod;
 
+  }
   nav ul {
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
     list-style-type: none;
-    margin: 0;
     padding: 0;
-    overflow: hidden;
-    justify-content: center;
+    margin: 0;
+    width: 200px;
+    margin: 0 auto;
   }
 
   nav ul li {
-    float: left;
+    float: none;
     margin-bottom: 0;
   }
 
@@ -141,11 +139,16 @@ ul li a {
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 12px 16px;
     text-decoration: none;
+    border-radius: 4px;
+    transition: 0.3s;
+  }
+
+  nav ul li a:hover {
+    background-color: #555;
   }
 }
-
 
 /* --- Back Link --- */
 .back-link {
@@ -153,7 +156,11 @@ ul li a {
   margin-bottom: 1rem;
 }
 
-
+/* --- Main Content --- */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+}
 
 /* --- Drop Cap (pengganti <font> untuk huruf awal) --- */
 .drop-cap {
