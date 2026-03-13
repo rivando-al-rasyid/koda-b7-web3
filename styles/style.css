@@ -1,0 +1,252 @@
+/* ============================================
+   GLOBAL STYLES
+   Strategi Efektif Mengelola Waktu di Era Digital
+   Author: Rivando Al Rasyid
+   ============================================ */
+
+/* --- Reset & Base --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ADA085;
+  margin: 0;
+  padding: 1rem;
+  font-family: sans-serif;
+}
+
+/* --- Link Colors --- */
+a:link {
+  color: #FF00FF;
+}
+
+a:visited {
+  color: #5B0547;
+}
+
+/* --- Layout Utilities --- */
+.center {
+  text-align: center;
+}
+
+.justify {
+  text-align: justify;
+}
+
+/* --- Header / Hero --- */
+header {
+  text-align: center;
+}
+
+header img {
+  max-width: 700px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+header figcaption {
+  font-size: 0.9rem;
+  color: #3a3020;
+  margin-top: 0.4rem;
+}
+
+/* --- Navigation --- */
+nav {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+main{  background-color: orchid;
+}
+nav ul li {
+  margin-bottom: 0.5rem;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+    justify-content: center;
+
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px)  {
+    main{
+  background-color: aquamarine;
+  position: sticky;
+  top: 10px;
+  bottom: 10px;
+}
+nav {
+  text-align: center;
+  margin-top: 1rem;
+
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+ul li {
+  float: left;
+}
+
+ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+
+}
+
+@media screen and (min-width: 1024px)  {
+    main{
+  background-color: burlywood;
+  position: sticky;
+  top: 10px;
+  bottom: 10px;
+}
+@media screen and (min-width: 1024px) {
+  main {
+    background-color: burlywood;
+    position: sticky;
+    top: 10px;
+    bottom: 10px;
+  }
+
+  nav {
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  nav ul li {
+    margin-bottom: 0.5rem;
+  }
+
+  .navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+}
+
+
+/* --- Back Link --- */
+.back-link {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+/* --- Main Content --- */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* --- Drop Cap (pengganti <font> untuk huruf awal) --- */
+.drop-cap {
+  font-family: 'Rubik Glitch', cursive;
+  font-size: 3rem;
+  color: green;
+  line-height: 1;
+  margin-right: 0.1em;
+}
+
+.drop-cap-plain {
+  font-family: 'Rubik Glitch', cursive;
+  font-size: 3rem;
+  line-height: 1;
+  margin-right: 0.1em;
+}
+
+ul.square {
+  list-style-type: square;
+}
+
+/* --- Tables --- */
+table {
+  border-collapse: collapse;
+  width: 50%;
+  margin: 0 auto;
+}
+
+table.wide {
+  width: 70%;
+}
+
+caption {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+th,td {
+  border: 3px solid #333;
+  padding: 0.4rem 0.8rem;
+}
+
+thead tr {
+  background-color: #ffd900;
+}
+
+/* Zebra stripe — menggantikan bgcolor per baris */
+tbody tr:nth-child(even) {
+  background-color: #D3D3D3;
+}
+
+/* --- Forms --- */
+form {
+  display: inline-block;
+  text-align: left;
+}
+
+form label {
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+form input[type="text"] {
+  margin-bottom: 0.4rem;
+}
+
+form .form-group-checkbox label {
+  display: block;
+  margin-left: 1rem;
+}
+
+form .form-actions {
+  margin-top: 1rem;
+}
+
+form button {
+  margin-right: 0.5rem;
+  padding: 0.3rem 1rem;
+  cursor: pointer;
+}
+
+/* --- Footer --- */
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: #3a3020;
+}
