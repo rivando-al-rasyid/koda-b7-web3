@@ -1,0 +1,37 @@
+  .calbody {
+    display: grid;
+  grid-template-columns: repeat(3, 1fr) repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+    gap: 10px;
+    background-color: #202124;
+    padding: 20px;
+  }
+
+  .calbody div {
+    padding: 15px 0;
+    border-radius: 50px;
+    border: none;
+    background-color: #3c4043;
+    color: #e8eaed;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    cursor: pointer;
+    grid-area: auto;
+  }
+
+  /* Warna khusus untuk angka agar sedikit lebih terang jika perlu */
+  .btn-number {
+    background-color: #3c4043;
+  }
+
+  /* Warna untuk tombol operator kanan (AC, ÷, ×, -, +) */
+  .btn-op {
+    background-color: #3c4043;
+  }
+
+  /* Tombol "=" yang berwarna biru muda di foto */
+  .btn-equal {
+    background-color: #aecbfa !important;
+    color: #202124 !important;
+    font-weight: bold;
+  }

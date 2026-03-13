@@ -1,0 +1,112 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  border: 0cap;
+  padding: 0cap;
+}
+
+header {
+    display: flex;
+    /* Centers content horizontally along the main axis (row by default) */
+    justify-content: center;
+    background-color: aliceblue;
+    margin: 10px;
+    /* Centers content vertically along the cross axis */
+    align-items: center;
+    height: 200px; /* Example height for visibility */
+    ul {
+      list-style-type: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    /* Centers content horizontally along the main axis (row by default) */
+    background-color: aquamarine;
+    h2{ text-align: center;}
+    /* Centers content vertically along the cross axis */
+    height: 200px; /* Example height for visibility */
+    ul {
+      display: flex;
+      justify-content: center;
+      list-style-type: none;
+      align-items: center;
+      gap: 20px;
+    }}
+}
+@media screen and (min-width: 1024px) {
+  header {
+    display: flex;
+    /* Centers content horizontally along the main axis (row by default) */
+    justify-content: center;
+    background-color: blueviolet;
+    /* Centers content vertically along the cross axis */
+    align-items: center;
+    height: 200px; /* Example height for visibility */
+    ul {
+          display: flex;
+            flex-direction: column;
+
+    li{
+      a{color: whitesmoke;}}
+
+      list-style-type: none;
+    }
+}
+
+}
+
+.box {
+  background-color: lightgrey;
+  width: 100px;
+  width: 100px;
+  border: 5px solid greenyellow;
+  padding: 50px;
+  margin: 20px;
+}
+
+.flexy{
+  display: flex;
+  justify-content: space-around;
+  size: 600px;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin: 20px auto;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+}
+
+/* All items: equal width by default */
+.item {
+  flex: 1 1 100px;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lightsteelblue;
+  border: 2px solid steelblue;
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.9rem;
+  padding: 1rem;
+}
+
+/* Middle column color — all breakpoints */
+.item.mid {
+  background-color: cornflowerblue;
+  color: white;
+  font-weight: bold;
+}
+
+/* Middle column 2× wider — tablet (768px) and above */
+@media screen and (min-width: 768px) {
+  .item.mid {
+    flex: 2 1 100px;      /* grow:2 → 2× wider than side columns */
+  }
+}
