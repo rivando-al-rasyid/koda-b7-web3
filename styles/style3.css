@@ -1,37 +1,76 @@
+/* Update the grid to accommodate the screen at the top */
+.calbody {
+  display: grid;
+  /* 7 columns for the desktop scientific view */
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  background-color: #202124;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+/* Screen Styling */
+.cal-screen {
+  grid-column: span 7; /* Spans across all columns */
+  background-color: #202124;
+  color: #e8eaed;
+  text-align: right;
+  padding: 20px;
+  margin-bottom: 10px;
+  border: 1px solid #3c4043;
+  border-radius: 8px;
+}
+
+.screen-history {
+  font-size: 0.9rem;
+  color: #9aa0a6;
+  margin-bottom: 5px;
+}
+
+.screen-current {
+  font-size: 2rem;
+}
+
+/* Base button style (keep your existing ones, but ensure they center well) */
+.calbody div:not(.cal-screen) {
+  padding: 15px 0;
+  border-radius: 50px;
+  background-color: #3c4043;
+  color: #e8eaed;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* --- Media Query for Mobile --- */
+@media (max-width: 480px) {
   .calbody {
-    display: grid;
-  grid-template-columns: repeat(3, 1fr) repeat(4, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-    gap: 10px;
-    background-color: #202124;
-    padding: 20px;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for mobile */
+    max-width: 100%;
+    padding: 10px;
+    gap: 8px;
   }
 
-  .calbody div {
-    padding: 15px 0;
-    border-radius: 50px;
-    border: none;
-    background-color: #3c4043;
-    color: #e8eaed;
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-    cursor: pointer;
-    grid-area: auto;
+  .cal-screen {
+    grid-column: span 4; /* Span full width of the new 4-column grid */
+    padding: 15px;
   }
 
-  /* Warna khusus untuk angka agar sedikit lebih terang jika perlu */
-  .btn-number {
-    background-color: #3c4043;
+  /* Force scientific buttons to the bottom */
+  .btn-sci {
+    display: flex; /* Show them again */
+    order: 2;      /* Move to the end of the flex/grid order */
+    grid-column: span 1; /* Each takes 1 of the 4 columns */
+    font-size: 0.85rem;
+    padding: 10px 0;
+    background-color: #303134; /* Slightly darker to distinguish from numbers */
   }
 
-  /* Warna untuk tombol operator kanan (AC, ÷, ×, -, +) */
-  .btn-op {
-    background-color: #3c4043;
+  /* Ensure standard buttons stay on top */
+  .btn-number, .btn-op, .btn-equal {
+    order: 1;
+    padding: 18px 0;
   }
-
-  /* Tombol "=" yang berwarna biru muda di foto */
-  .btn-equal {
-    background-color: #aecbfa !important;
-    color: #202124 !important;
-    font-weight: bold;
-  }
+}
